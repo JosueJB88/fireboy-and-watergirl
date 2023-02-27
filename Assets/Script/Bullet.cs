@@ -7,7 +7,8 @@ public class Bullet : MonoBehaviour
 {
     // Start is called before the first frame update
     public float life = 3;
-
+    public AudioSource audioSource;
+    public GameObject menu;
     private void Awake()
     {
         Destroy(gameObject, life);
@@ -18,7 +19,18 @@ public class Bullet : MonoBehaviour
         if (other.gameObject.name == "Jugador")
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(currentSceneName);
+            audioSource.Play();
+            StartCoroutine(play());
+            // SceneManager.LoadScene("LEVEL1");
         }
+    }
+
+    IEnumerator play()
+    {
+        yield return new WaitForSeconds(1);
+        GameObject g = Instantiate(menu);
+        g.transform.SetParent(gameObject.transform.transform.parent, false);
+        g.SetActive(true);
+        // menu.SetActive(true);
     }
 }

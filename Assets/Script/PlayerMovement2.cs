@@ -10,6 +10,8 @@ public class PlayerMovement2 : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    public int jumpCount = 0;
+    public int maxJumpCount = 2;
 
     void Update()
     {
@@ -17,14 +19,30 @@ public class PlayerMovement2 : MonoBehaviour
 
         Debug.Log(groundLayer.value);
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        // if (Input.GetButtonDown("Jump") && IsGrounded())
+        // {
+        //     rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        // }
+
+        // if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        // {
+        //     rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        // }
+
+        if (Input.GetButtonDown("Jump") && (IsGrounded() || jumpCount < maxJumpCount))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            jumpCount++;
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+
+        if (!IsGrounded())
+        {
+            jumpCount = Mathf.Clamp(jumpCount, 0, maxJumpCount);
         }
 
         Flip();
