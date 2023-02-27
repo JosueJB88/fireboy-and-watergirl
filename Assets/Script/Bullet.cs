@@ -20,7 +20,11 @@ public class Bullet : MonoBehaviour
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
             audioSource.Play();
-            StartCoroutine(play());
+
+            if (currentSceneName != "LEVEL1")
+            {
+                StartCoroutine(play());
+            }
             // SceneManager.LoadScene("LEVEL1");
         }
     }

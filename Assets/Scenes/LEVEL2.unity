@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2926,6 +2926,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8745449266000803438, guid: 000ff0b3fea1db043a15792aaf30af51, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 1135009784}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5155,6 +5159,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8745449266000803438, guid: 000ff0b3fea1db043a15792aaf30af51, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 1135009784}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8362,6 +8370,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8745449266000803438, guid: 000ff0b3fea1db043a15792aaf30af51, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 1135009784}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11359,6 +11371,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8745449266000803438, guid: 000ff0b3fea1db043a15792aaf30af51, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 1135009784}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11551,6 +11567,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8745449266000803438, guid: 000ff0b3fea1db043a15792aaf30af51, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 1135009784}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
